@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
 	
@@ -22,7 +23,11 @@ public class Main extends Application {
 			scrollPane.setFitToWidth(true);
 			
 			mainScene = new Scene(scrollPane);
+			primaryStage.initStyle(StageStyle.UTILITY);
+			primaryStage.setResizable(false);
+			primaryStage.setFullScreen(false);
 			primaryStage.setScene(mainScene);
+			primaryStage.fullScreenProperty();
 			primaryStage.setTitle("Sample JavaFX application");
 			primaryStage.show();
 		} catch (IOException e) {
